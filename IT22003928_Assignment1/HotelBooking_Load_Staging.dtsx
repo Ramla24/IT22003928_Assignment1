@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="HotelBooking_Load_Staging"
   DTS:PackageType="5"
-  DTS:VersionBuild="56"
-  DTS:VersionGUID="{37B68983-A325-40B7-9A39-38BC6EDB8EC0}">
+  DTS:VersionBuild="71"
+  DTS:VersionGUID="{990717B7-3EAB-43CE-B90C-311ACE0D6390}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -25,7 +25,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\ASUS\Documents\Year 3 Semester 2\DWBI\Assignment 01\Data\DepositType.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\ASUS\Documents\Year 3 Semester 2\DWBI\Assignment 01\Data\DepositType.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -37,7 +37,7 @@
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="0"
           DTS:ConnectRetryInterval="0"
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ASUS\Documents\Year 3 Semester 2\DWBI\Assignment 01\ReservationStatus.xlsx;Extended Properties=&quot;Excel 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\ASUS\Documents\Year 3 Semester 2\DWBI\Assignment 01\ReservationStatus.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -154,11 +154,10 @@
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
               DTS:ColumnDelimiter="_x002C_"
-              DTS:MaximumWidth="50"
-              DTS:DataType="129"
+              DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="Customer_ID"
-              DTS:DTSID="{34365E24-5087-4647-A4E9-14490DFB57ED}"
+              DTS:DTSID="{DF4E97C0-F3CE-4A3B-9E55-15A3A3FB0AA4}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -167,7 +166,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Address"
-              DTS:DTSID="{70F7ABB7-8F96-442A-B1DF-FE1866B61B75}"
+              DTS:DTSID="{7C100A98-80E2-41CC-A29F-824D3E055833}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -176,7 +175,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="City"
-              DTS:DTSID="{756E88BD-DE2E-4E63-9B6C-077C334847DD}"
+              DTS:DTSID="{544890BA-620A-4D4D-9898-03B94BD6D61C}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -185,7 +184,7 @@
               DTS:DataType="130"
               DTS:TextQualified="True"
               DTS:ObjectName="Country"
-              DTS:DTSID="{A9299A04-0F75-4062-8518-27BABA6294B0}"
+              DTS:DTSID="{2FBE7119-625D-40B1-800A-355D9FB7A21B}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
@@ -738,165 +737,111 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[bookingID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="bookingID" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[booking_date]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="dbDate"
                       name="booking_date" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[hotelID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="hotelID" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="customer_id" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[reserved_room_typeID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="reserved_room_typeID" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[assigned_room_typeID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="assigned_room_typeID" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[mealTypeID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="mealTypeID" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[deposit_typeID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="deposit_typeID" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[customer_type_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="customer_type_id" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[arrival_date]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="dbDate"
                       name="arrival_date" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[adults]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="adults" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[children]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="children" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[babies]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="babies" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[stays_in_weekend_nights]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="stays_in_weekend_nights" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[stays_in_week_nights]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="stays_in_week_nights" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[required_car_parking_spaces]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="required_car_parking_spaces" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[is_canceled]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="bool"
                       name="is_canceled" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[days_in_waiting_list]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="days_in_waiting_list" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[lead_time]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="lead_time" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[is_repeated_guest]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="bool"
                       name="is_repeated_guest" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[previous_cancellations]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="previous_cancellations" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[previous_bookings_not_canceled]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="previous_bookings_not_canceled" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[booking_changes]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="booking_changes" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[adr]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="r8"
                       name="adr" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[total_of_special_requests]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="total_of_special_requests" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[reservation_status_id]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="reservation_status_id" />
                     <externalMetadataColumn
                       refId="Package\Extract  Booking Data to staging\Load data to Booking staging table.Inputs[OLE DB Destination Input].ExternalColumns[reservation_status_date]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="dbDate"
                       name="reservation_status_date" />
                   </externalMetadataColumns>
                 </input>
@@ -1760,12 +1705,10 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Extract Customer Address Data to staging\Flat File Source.Outputs[Flat File Source Output].Columns[Customer_ID]"
-                      codePage="1252"
-                      dataType="str"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
                       externalMetadataColumnId="Package\Extract Customer Address Data to staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer_ID]"
-                      length="50"
                       lineageId="Package\Extract Customer Address Data to staging\Flat File Source.Outputs[Flat File Source Output].Columns[Customer_ID]"
                       name="Customer_ID"
                       truncationRowDisposition="FailComponent">
@@ -1848,9 +1791,7 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Extract Customer Address Data to staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Customer_ID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Customer_ID" />
                     <externalMetadataColumn
                       refId="Package\Extract Customer Address Data to staging\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Address]"
@@ -1972,9 +1913,7 @@
                   <inputColumns>
                     <inputColumn
                       refId="Package\Extract Customer Address Data to staging\Load data to customer address staging table.Inputs[OLE DB Destination Input].Columns[Customer_ID]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
+                      cachedDataType="i4"
                       cachedName="Customer_ID"
                       externalMetadataColumnId="Package\Extract Customer Address Data to staging\Load data to customer address staging table.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
                       lineageId="Package\Extract Customer Address Data to staging\Flat File Source.Outputs[Flat File Source Output].Columns[Customer_ID]" />
@@ -2004,13 +1943,12 @@
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Extract Customer Address Data to staging\Load data to customer address staging table.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
+                      dataType="i4"
                       name="Customer_ID" />
                     <externalMetadataColumn
                       refId="Package\Extract Customer Address Data to staging\Load data to customer address staging table.Inputs[OLE DB Destination Input].ExternalColumns[Address]"
-                      dataType="nText"
+                      dataType="wstr"
+                      length="800"
                       name="Address" />
                     <externalMetadataColumn
                       refId="Package\Extract Customer Address Data to staging\Load data to customer address staging table.Inputs[OLE DB Destination Input].ExternalColumns[City]"
@@ -2105,7 +2043,7 @@
               <DTS:ObjectData>
                 <SQLTask:SqlTaskData
                   SQLTask:Connection="{7F81DD85-08A5-44C6-9344-D558E5423C77}"
-                  SQLTask:SqlStatementSource="truncate table dbo.stgCustomer" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+                  SQLTask:SqlStatementSource="truncate table dbo.StgCustomer" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
               </DTS:ObjectData>
             </DTS:Executable>
           </DTS:Executables>
@@ -2116,11 +2054,11 @@
           version="1">
           <components>
             <component
-              refId="Package\Extract Customer Data to staging\Load Data to Customer Staging"
+              refId="Package\Extract Customer Data to staging\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
-              name="Load Data to Customer Staging"
+              name="OLE DB Destination"
               usesDispositions="true"
               version="4">
               <properties>
@@ -2173,7 +2111,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Connections[OleDbConnection]"
+                  refId="Package\Extract Customer Data to staging\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="Package.ConnectionManagers[RAMLANALMI\SQLEXPRESS.HotelBooking_Staging]"
                   connectionManagerRefId="Package.ConnectionManagers[RAMLANALMI\SQLEXPRESS.HotelBooking_Staging]"
                   description="The OLE DB runtime connection used to access the database."
@@ -2181,134 +2119,140 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input]"
+                  refId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].Columns[Customer_ID]"
+                      refId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Customer_ID]"
+                      cachedDataType="i4"
+                      cachedName="Customer_ID"
+                      externalMetadataColumnId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_ID]" />
+                    <inputColumn
+                      refId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Title]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
-                      cachedName="Customer_ID"
-                      externalMetadataColumnId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
-                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_ID]" />
+                      cachedName="Title"
+                      externalMetadataColumnId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
+                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Title]" />
                     <inputColumn
-                      refId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].Columns[Name]"
+                      refId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Name"
-                      externalMetadataColumnId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      externalMetadataColumnId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
                       lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]" />
                     <inputColumn
-                      refId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].Columns[Age]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Age"
-                      externalMetadataColumnId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
-                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Age]" />
-                    <inputColumn
-                      refId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].Columns[Gender]"
+                      refId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Gender]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Gender"
-                      externalMetadataColumnId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      externalMetadataColumnId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
                       lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Gender]" />
                     <inputColumn
-                      refId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].Columns[Loyalty_Level]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="50"
-                      cachedName="Loyalty_Level"
-                      externalMetadataColumnId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].ExternalColumns[Loyalty_Level]"
-                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Loyalty_Level]" />
+                      refId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DOB]"
+                      cachedDataType="dbDate"
+                      cachedName="DOB"
+                      externalMetadataColumnId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DOB]"
+                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[DOB]" />
                     <inputColumn
-                      refId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].Columns[Email]"
+                      refId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Email]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Email"
-                      externalMetadataColumnId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].ExternalColumns[Email]"
+                      externalMetadataColumnId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Email]"
                       lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Email]" />
                     <inputColumn
-                      refId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].Columns[Phone]"
+                      refId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Phone]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="50"
                       cachedName="Phone"
-                      externalMetadataColumnId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].ExternalColumns[Phone]"
+                      externalMetadataColumnId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Phone]"
                       lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Phone]" />
+                    <inputColumn
+                      refId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Loyalty_Level]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Loyalty_Level"
+                      externalMetadataColumnId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Loyalty_Level]"
+                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Loyalty_Level]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      refId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Customer_ID]"
+                      dataType="i4"
+                      name="Customer_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Title]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Customer_ID" />
+                      name="Title" />
                     <externalMetadataColumn
-                      refId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
+                      refId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Name]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Name" />
                     <externalMetadataColumn
-                      refId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].ExternalColumns[Age]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Age" />
-                    <externalMetadataColumn
-                      refId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
+                      refId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Gender]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Gender" />
                     <externalMetadataColumn
-                      refId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].ExternalColumns[Loyalty_Level]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Loyalty_Level" />
+                      refId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[DOB]"
+                      dataType="dbDate"
+                      name="DOB" />
                     <externalMetadataColumn
-                      refId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].ExternalColumns[Email]"
+                      refId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Email]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Email" />
                     <externalMetadataColumn
-                      refId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input].ExternalColumns[Phone]"
+                      refId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Phone]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Phone" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Loyalty_Level]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Loyalty_Level" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\Extract Customer Data to staging\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\Extract Customer Data to staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\Extract Customer Data to staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\Extract Customer Data to staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\Extract Customer Data to staging\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -2379,14 +2323,23 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_ID]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Customer_ID]"
+                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_ID]"
+                      name="Customer_ID"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Title]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Customer_ID]"
+                      externalMetadataColumnId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Title]"
                       length="50"
-                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Customer_ID]"
-                      name="Customer_ID"
+                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Title]"
+                      name="Title"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Name]"
@@ -2400,17 +2353,6 @@
                       name="Name"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Age]"
-                      codePage="1252"
-                      dataType="str"
-                      errorOrTruncationOperation="Conversion"
-                      errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Age]"
-                      length="50"
-                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Age]"
-                      name="Age"
-                      truncationRowDisposition="FailComponent" />
-                    <outputColumn
                       refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Gender]"
                       codePage="1252"
                       dataType="str"
@@ -2422,15 +2364,13 @@
                       name="Gender"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Loyalty_Level]"
-                      codePage="1252"
-                      dataType="str"
+                      refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[DOB]"
+                      dataType="dbDate"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Loyalty_Level]"
-                      length="50"
-                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Loyalty_Level]"
-                      name="Loyalty_Level"
+                      externalMetadataColumnId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DOB]"
+                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[DOB]"
+                      name="DOB"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
                       refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Email]"
@@ -2454,15 +2394,30 @@
                       lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Phone]"
                       name="Phone"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Loyalty_Level]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Loyalty_Level]"
+                      length="50"
+                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].Columns[Loyalty_Level]"
+                      name="Loyalty_Level"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
                       refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Customer_ID]"
+                      dataType="i4"
+                      name="Customer_ID" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Title]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      name="Customer_ID" />
+                      name="Title" />
                     <externalMetadataColumn
                       refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Name]"
                       codePage="1252"
@@ -2470,23 +2425,15 @@
                       length="50"
                       name="Name" />
                     <externalMetadataColumn
-                      refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Age]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Age" />
-                    <externalMetadataColumn
                       refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Gender]"
                       codePage="1252"
                       dataType="str"
                       length="50"
                       name="Gender" />
                     <externalMetadataColumn
-                      refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Loyalty_Level]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      name="Loyalty_Level" />
+                      refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[DOB]"
+                      dataType="dbDate"
+                      name="DOB" />
                     <externalMetadataColumn
                       refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Email]"
                       codePage="1252"
@@ -2499,6 +2446,12 @@
                       dataType="str"
                       length="50"
                       name="Phone" />
+                    <externalMetadataColumn
+                      refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[Loyalty_Level]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Loyalty_Level" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -2508,11 +2461,16 @@
                   <outputColumns>
                     <outputColumn
                       refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Customer_ID]"
+                      dataType="i4"
+                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Customer_ID]"
+                      name="Customer_ID" />
+                    <outputColumn
+                      refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Title]"
                       codePage="1252"
                       dataType="str"
                       length="50"
-                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Customer_ID]"
-                      name="Customer_ID" />
+                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Title]"
+                      name="Title" />
                     <outputColumn
                       refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Name]"
                       codePage="1252"
@@ -2521,13 +2479,6 @@
                       lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Name]"
                       name="Name" />
                     <outputColumn
-                      refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Age]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Age]"
-                      name="Age" />
-                    <outputColumn
                       refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Gender]"
                       codePage="1252"
                       dataType="str"
@@ -2535,12 +2486,10 @@
                       lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Gender]"
                       name="Gender" />
                     <outputColumn
-                      refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Loyalty_Level]"
-                      codePage="1252"
-                      dataType="str"
-                      length="50"
-                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Loyalty_Level]"
-                      name="Loyalty_Level" />
+                      refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DOB]"
+                      dataType="dbDate"
+                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[DOB]"
+                      name="DOB" />
                     <outputColumn
                       refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Email]"
                       codePage="1252"
@@ -2555,6 +2504,13 @@
                       length="50"
                       lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Phone]"
                       name="Phone" />
+                    <outputColumn
+                      refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Loyalty_Level]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[Loyalty_Level]"
+                      name="Loyalty_Level" />
                     <outputColumn
                       refId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -2576,7 +2532,7 @@
           <paths>
             <path
               refId="Package\Extract Customer Data to staging.Paths[OLE DB Source Output]"
-              endId="Package\Extract Customer Data to staging\Load Data to Customer Staging.Inputs[OLE DB Destination Input]"
+              endId="Package\Extract Customer Data to staging\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="OLE DB Source Output"
               startId="Package\Extract Customer Data to staging\OLE DB Source.Outputs[OLE DB Source Output]" />
           </paths>
@@ -4235,6 +4191,13 @@
                       cachedName="zip_code"
                       externalMetadataColumnId="Package\Extract HotelAddress Data to staging\Load data to Hotel Address staging table.Inputs[OLE DB Destination Input].ExternalColumns[zip_code]"
                       lineageId="Package\Extract HotelAddress Data to staging\Flat File Source.Outputs[Flat File Source Output].Columns[zip_code]" />
+                    <inputColumn
+                      refId="Package\Extract HotelAddress Data to staging\Load data to Hotel Address staging table.Inputs[OLE DB Destination Input].Columns[country]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="country"
+                      externalMetadataColumnId="Package\Extract HotelAddress Data to staging\Load data to Hotel Address staging table.Inputs[OLE DB Destination Input].ExternalColumns[address_country]"
+                      lineageId="Package\Extract HotelAddress Data to staging\Flat File Source.Outputs[Flat File Source Output].Columns[country]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -6693,6 +6656,14 @@
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
+          Size="226.4,41.6"
+          Id="Package\Extract  Booking Data to staging"
+          TopLeft="706.388850293503,271.046558961737" />
+        <NodeLayout
+          Size="272,41.6"
+          Id="Package\Extract Customer Address Data to staging"
+          TopLeft="1087.03697764395,434.365076344559" />
+        <NodeLayout
           Size="231.2,41.6"
           Id="Package\Extract Customer Data to staging"
           TopLeft="4.72222196421147,24.1428569749707" />
@@ -6700,26 +6671,58 @@
           Size="256.8,41.6"
           Id="Package\Extract Customer Type Data to staging"
           TopLeft="124.629622820167,75.4687825439825" />
+        <NodeLayout
+          Size="244,41.6"
+          Id="Package\Extract Deposit type Data to staging"
+          TopLeft="1270.89807892789,490.698410099761" />
+        <NodeLayout
+          Size="210.4,41.6"
+          Id="Package\Extract Hotel Data to staging"
+          TopLeft="839.285668429167,326.857140584219" />
+        <NodeLayout
+          Size="248.8,41.6"
+          Id="Package\Extract HotelAddress Data to staging"
+          TopLeft="956.779048252998,380.498674804399" />
+        <NodeLayout
+          Size="232,41.6"
+          Id="Package\Extract mealType Data to staging"
+          TopLeft="1580.27306202439,603.235447279095" />
+        <NodeLayout
+          Size="273.6,41.6"
+          Id="Package\Extract Reservation Status Data to staging"
+          TopLeft="1382.35640617141,547.753965710561" />
+        <NodeLayout
+          Size="258.4,41.6"
+          Id="Package\Extract Room Category Data to staging"
+          TopLeft="409.351829485854,176.483596656353" />
+        <NodeLayout
+          Size="234.4,41.6"
+          Id="Package\Extract Room Tier Data to staging"
+          TopLeft="277.037021900401,128.335448843021" />
+        <NodeLayout
+          Size="240,41.6"
+          Id="Package\Extract Room Type Data to staging"
+          TopLeft="558.981450940081,227.950263009631" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="235.922221964211,44.9428569749707">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="17.1074008559558,30.5259255690118"
+              EndConnector="17.1074008559555,30.5259255690118"
               Start="0,0"
-              End="17.1074008559558,23.0259255690118">
+              End="17.1074008559555,23.0259255690118">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="13.1074008559558,0" />
+                    End="13.1074008559555,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="13.1074008559558,0"
-                    Point2="17.1074008559558,0"
-                    Point3="17.1074008559558,4" />
+                    Point1="13.1074008559555,0"
+                    Point2="17.1074008559555,0"
+                    Point3="17.1074008559555,4" />
                   <mssgle:LineSegment
-                    End="17.1074008559558,23.0259255690118" />
+                    End="17.1074008559555,23.0259255690118" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6728,30 +6731,26 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="234.4,41.6"
-          Id="Package\Extract Room Tier Data to staging"
-          TopLeft="277.037021900401,128.335448843021" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
           TopLeft="381.429622820167,96.2687825439825">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="12.8073990802338,32.0666662990385"
+              EndConnector="12.807399080234,32.0666662990385"
               Start="0,0"
-              End="12.8073990802338,24.5666662990385">
+              End="12.807399080234,24.5666662990385">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="8.80739908023378,0" />
+                    End="8.80739908023401,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="8.80739908023378,0"
-                    Point2="12.8073990802338,0"
-                    Point3="12.8073990802338,4" />
+                    Point1="8.80739908023401,0"
+                    Point2="12.807399080234,0"
+                    Point3="12.807399080234,4" />
                   <mssgle:LineSegment
-                    End="12.8073990802338,24.5666662990385" />
+                    End="12.807399080234,24.5666662990385" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -6760,206 +6759,6 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="258.4,41.6"
-          Id="Package\Extract Room Category Data to staging"
-          TopLeft="409.351829485854,176.483596656353" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 2]"
-          TopLeft="511.437021900401,149.135448843021">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="27.1148075854526,27.3481478133319"
-              Start="0,0"
-              End="27.1148075854526,19.8481478133319">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="23.1148075854526,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="23.1148075854526,0"
-                    Point2="27.1148075854526,0"
-                    Point3="27.1148075854526,4" />
-                  <mssgle:LineSegment
-                    End="27.1148075854526,19.8481478133319" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="240,41.6"
-          Id="Package\Extract Room Type Data to staging"
-          TopLeft="558.981450940081,227.950263009631" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 3]"
-          TopLeft="667.751829485854,197.283596656353">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="11.2296214542272,30.6666663532785"
-              Start="0,0"
-              End="11.2296214542272,23.1666663532785">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="7.22962145422719,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="7.22962145422719,0"
-                    Point2="11.2296214542272,0"
-                    Point3="11.2296214542272,4" />
-                  <mssgle:LineSegment
-                    End="11.2296214542272,23.1666663532785" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="226.4,41.6"
-          Id="Package\Extract  Booking Data to staging"
-          TopLeft="706.388850293503,271.046558961737" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 4]"
-          TopLeft="798.981450940081,248.546558961737">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="20.6073993534221,22.5"
-              Start="0,0"
-              End="20.6073993534221,15">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="16.6073993534221,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="16.6073993534221,0"
-                    Point2="20.6073993534221,0"
-                    Point3="20.6073993534221,4" />
-                  <mssgle:LineSegment
-                    End="20.6073993534221,15" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="248.8,41.6"
-          Id="Package\Extract HotelAddress Data to staging"
-          TopLeft="956.779048252998,380.498674804399" />
-        <NodeLayout
-          Size="272,41.6"
-          Id="Package\Extract Customer Address Data to staging"
-          TopLeft="1087.03697764395,434.365076344559" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 7]"
-          TopLeft="1205.579048253,401.298674804399">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="17.4579293909569,33.0664015401598"
-              Start="0,0"
-              End="17.4579293909569,25.5664015401598">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="13.4579293909569,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="13.4579293909569,0"
-                    Point2="17.4579293909569,0"
-                    Point3="17.4579293909569,4" />
-                  <mssgle:LineSegment
-                    End="17.4579293909569,25.5664015401598" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="244,41.6"
-          Id="Package\Extract Deposit type Data to staging"
-          TopLeft="1270.89807892789,490.698410099761" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 8]"
-          TopLeft="1359.03697764395,455.165076344559">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="33.8611012839331,35.5333337552017"
-              Start="0,0"
-              End="33.8611012839331,28.0333337552017">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="29.8611012839331,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="29.8611012839331,0"
-                    Point2="33.8611012839331,0"
-                    Point3="33.8611012839331,4" />
-                  <mssgle:LineSegment
-                    End="33.8611012839331,28.0333337552017" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="273.6,41.6"
-          Id="Package\Extract Reservation Status Data to staging"
-          TopLeft="1382.35640617141,547.753965710561" />
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 9]"
-          TopLeft="1514.89807892789,511.498410099761">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="4.25832724351812,36.2555556107999"
-              Start="0,0"
-              End="4.25832724351812,28.7555556107999">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0.258327243518124,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0.258327243518124,0"
-                    Point2="4.25832724351812,0"
-                    Point3="4.25832724351812,4" />
-                  <mssgle:LineSegment
-                    End="4.25832724351812,28.7555556107999" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="232,41.6"
-          Id="Package\Extract mealType Data to staging"
-          TopLeft="1580.27306202439,603.235447279095" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 10]"
           TopLeft="1655.95640617141,568.553965710561">
@@ -6988,10 +6787,90 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="210.4,41.6"
-          Id="Package\Extract Hotel Data to staging"
-          TopLeft="839.285668429167,326.857140584219" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="511.437021900401,149.135448843021">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="27.114807585453,27.348147813332"
+              Start="0,0"
+              End="27.114807585453,19.848147813332">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="23.114807585453,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="23.114807585453,0"
+                    Point2="27.114807585453,0"
+                    Point3="27.114807585453,4" />
+                  <mssgle:LineSegment
+                    End="27.114807585453,19.848147813332" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="667.751829485854,197.283596656353">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="11.2296214542272,30.6666663532785"
+              Start="0,0"
+              End="11.2296214542272,23.1666663532785">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="7.22962145422719,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="7.22962145422719,0"
+                    Point2="11.2296214542272,0"
+                    Point3="11.2296214542272,4" />
+                  <mssgle:LineSegment
+                    End="11.2296214542272,23.1666663532785" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="798.981450940081,248.546558961737">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="20.6073993534221,22.5"
+              Start="0,0"
+              End="20.6073993534221,15">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="16.6073993534221,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="16.6073993534221,0"
+                    Point2="20.6073993534221,0"
+                    Point3="20.6073993534221,4" />
+                  <mssgle:LineSegment
+                    End="20.6073993534221,15" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 5]"
           TopLeft="932.788850293503,291.846558961737">
@@ -7048,423 +6927,93 @@
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 7]"
+          TopLeft="1205.579048253,401.298674804399">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17.4579293909569,33.0664015401598"
+              Start="0,0"
+              End="17.4579293909569,25.5664015401598">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="13.4579293909569,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13.4579293909569,0"
+                    Point2="17.4579293909569,0"
+                    Point3="17.4579293909569,4" />
+                  <mssgle:LineSegment
+                    End="17.4579293909569,25.5664015401598" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 8]"
+          TopLeft="1359.03697764395,455.165076344559">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="33.8611012839331,35.5333337552017"
+              Start="0,0"
+              End="33.8611012839331,28.0333337552017">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="29.8611012839331,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="29.8611012839331,0"
+                    Point2="33.8611012839331,0"
+                    Point3="33.8611012839331,4" />
+                  <mssgle:LineSegment
+                    End="33.8611012839331,28.0333337552017" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 9]"
+          TopLeft="1514.89807892789,511.498410099761">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="4.25832724351812,36.2555556107999"
+              Start="0,0"
+              End="4.25832724351812,28.7555556107999">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0.258327243518124,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0.258327243518124,0"
+                    Point2="4.25832724351812,0"
+                    Point3="4.25832724351812,4" />
+                  <mssgle:LineSegment
+                    End="4.25832724351812,28.7555556107999" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
-  <TaskHost
-    design-time-name="Package\Extract Customer Data to staging">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="152,41.6"
-          Id="Package\Extract Customer Data to staging\OLE DB Source"
-          TopLeft="262.499985657633,51.9999996383985" />
-        <NodeLayout
-          Size="224,41.6"
-          Id="Package\Extract Customer Data to staging\Load Data to Customer Staging"
-          TopLeft="370.833313071894,201.933331929114" />
-        <EdgeLayout
-          Id="Package\Extract Customer Data to staging.Paths[OLE DB Source Output]"
-          TopLeft="338.499985657633,93.5999996383985">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="144.333327414261,108.333332290716"
-              Start="0,0"
-              End="144.333327414261,100.833332290716">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,50.1666661453578" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,50.1666661453578"
-                    Point2="0,54.1666661453578"
-                    Point3="4,54.1666661453578" />
-                  <mssgle:LineSegment
-                    End="140.333327414261,54.1666661453578" />
-                  <mssgle:CubicBezierSegment
-                    Point1="140.333327414261,54.1666661453578"
-                    Point2="144.333327414261,54.1666661453578"
-                    Point3="144.333327414261,58.1666661453578" />
-                  <mssgle:LineSegment
-                    End="144.333327414261,100.833332290716" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Customer Data to staging\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Customer Data to staging\Load Data to Customer Staging">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package\Extract Customer Data to staging.EventHandlers[OnPreExecute]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="234.4,41.6"
-          Id="Package\Extract Customer Data to staging.EventHandlers[OnPreExecute]\Truncate Customer Staging Table"
-          TopLeft="394.999994114041,157.999997645617" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
-  <TaskHost
-    design-time-name="Package\Extract Customer Type Data to staging">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="152,41.6"
-          Id="Package\Extract Customer Type Data to staging\OLE DB Source"
-          TopLeft="305.999995440245,106.999998405576" />
-        <NodeLayout
-          Size="265.6,41.6"
-          Id="Package\Extract Customer Type Data to staging\Load data to customer type staging table"
-          TopLeft="263.999996066094,243.999996364117" />
-        <EdgeLayout
-          Id="Package\Extract Customer Type Data to staging.Paths[OLE DB Source Output]"
-          TopLeft="381.999995440245,148.599998405576">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="14.8000006258489,95.399997958541"
-              Start="0,0"
-              End="14.8000006258489,87.899997958541">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.6999989792705" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,43.6999989792705"
-                    Point2="0,47.6999989792705"
-                    Point3="4,47.6999989792705" />
-                  <mssgle:LineSegment
-                    End="10.8000006258489,47.6999989792705" />
-                  <mssgle:CubicBezierSegment
-                    Point1="10.8000006258489,47.6999989792705"
-                    Point2="14.8000006258489,47.6999989792705"
-                    Point3="14.8000006258489,51.6999989792705" />
-                  <mssgle:LineSegment
-                    End="14.8000006258489,87.899997958541" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Customer Type Data to staging\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Customer Type Data to staging\Load data to customer type staging table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package\Extract Customer Type Data to staging.EventHandlers[OnPreExecute]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="257.6,41.6"
-          Id="Package\Extract Customer Type Data to staging.EventHandlers[OnPreExecute]\Truncate CustomerType Staging Table"
-          TopLeft="347.999994814396,112.999998316169" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
-  <TaskHost
-    design-time-name="Package\Extract Room Tier Data to staging">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="152,41.6"
-          Id="Package\Extract Room Tier Data to staging\OLE DB Source"
-          TopLeft="337.999994963408,70.9999989420175" />
-        <NodeLayout
-          Size="246.4,41.6"
-          Id="Package\Extract Room Tier Data to staging\Load data to RoomTier staging table"
-          TopLeft="492.999992653728,213.999996811152" />
-        <EdgeLayout
-          Id="Package\Extract Room Tier Data to staging.Paths[OLE DB Source Output]"
-          TopLeft="413.999994963408,112.599998942018">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="202.19999769032,101.399997869134"
-              Start="0,0"
-              End="202.19999769032,93.899997869134">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,46.699998934567" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,46.699998934567"
-                    Point2="0,50.699998934567"
-                    Point3="4,50.699998934567" />
-                  <mssgle:LineSegment
-                    End="198.19999769032,50.699998934567" />
-                  <mssgle:CubicBezierSegment
-                    Point1="198.19999769032,50.699998934567"
-                    Point2="202.19999769032,50.699998934567"
-                    Point3="202.19999769032,54.699998934567" />
-                  <mssgle:LineSegment
-                    End="202.19999769032,93.899997869134" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Room Tier Data to staging\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Room Tier Data to staging\Load data to RoomTier staging table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package\Extract Room Tier Data to staging.EventHandlers[OnPreExecute]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="231.2,41.6"
-          Id="Package\Extract Room Tier Data to staging.EventHandlers[OnPreExecute]\Truncate RoomTier Staging table"
-          TopLeft="322.999995186925,120.99999819696" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
-  <TaskHost
-    design-time-name="Package\Extract Room Category Data to staging">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="152,41.6"
-          Id="Package\Extract Room Category Data to staging\OLE DB Source"
-          TopLeft="390.999994173646,95.9999985694886" />
-        <NodeLayout
-          Size="272.8,41.6"
-          Id="Package\Extract Room Category Data to staging\Load data to Room Category staging table"
-          TopLeft="416.999993786216,234.999996498227" />
-        <EdgeLayout
-          Id="Package\Extract Room Category Data to staging.Paths[OLE DB Source Output]"
-          TopLeft="466.999994173646,137.599998569489">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="86.3999996125699,97.3999979287386"
-              Start="0,0"
-              End="86.3999996125699,89.8999979287386">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,44.6999989643693" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,44.6999989643693"
-                    Point2="0,48.6999989643693"
-                    Point3="4,48.6999989643693" />
-                  <mssgle:LineSegment
-                    End="82.3999996125699,48.6999989643693" />
-                  <mssgle:CubicBezierSegment
-                    Point1="82.3999996125699,48.6999989643693"
-                    Point2="86.3999996125699,48.6999989643693"
-                    Point3="86.3999996125699,52.6999989643693" />
-                  <mssgle:LineSegment
-                    End="86.3999996125699,89.8999979287386" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Room Category Data to staging\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Room Category Data to staging\Load data to Room Category staging table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package\Extract Room Category Data to staging.EventHandlers[OnPreExecute]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="258.4,41.6"
-          Id="Package\Extract Room Category Data to staging.EventHandlers[OnPreExecute]\Truncate Room Category Staging table"
-          TopLeft="433.999993532896,178.999997332692" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
-  <TaskHost
-    design-time-name="Package\Extract Room Type Data to staging">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="152,41.6"
-          Id="Package\Extract Room Type Data to staging\OLE DB Source"
-          TopLeft="283.99999576807,88.9999986737966" />
-        <NodeLayout
-          Size="246.4,41.6"
-          Id="Package\Extract Room Type Data to staging\Load data to room type staging table"
-          TopLeft="402.999993994832,225.999996632338" />
-        <EdgeLayout
-          Id="Package\Extract Room Type Data to staging.Paths[OLE DB Source Output]"
-          TopLeft="359.99999576807,130.599998673797">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="166.199998226762,95.399997958541"
-              Start="0,0"
-              End="166.199998226762,87.899997958541">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.6999989792705" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,43.6999989792705"
-                    Point2="0,47.6999989792705"
-                    Point3="4,47.6999989792705" />
-                  <mssgle:LineSegment
-                    End="162.199998226762,47.6999989792705" />
-                  <mssgle:CubicBezierSegment
-                    Point1="162.199998226762,47.6999989792705"
-                    Point2="166.199998226762,47.6999989792705"
-                    Point3="166.199998226762,51.6999989792705" />
-                  <mssgle:LineSegment
-                    End="166.199998226762,87.899997958541" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <DtsEventHandler
-    design-time-name="Package\Extract Room Type Data to staging.EventHandlers[OnPreExecute]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="236.8,41.6"
-          Id="Package\Extract Room Type Data to staging.EventHandlers[OnPreExecute]\Truncate RoomType Staging table"
-          TopLeft="353.999994724989,151.999997735024" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
   <TaskHost
     design-time-name="Package\Extract  Booking Data to staging">
     <LayoutInfo>
@@ -7515,19 +7064,18 @@
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract  Booking Data to staging\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
+  <DtsEventHandler
+    design-time-name="Package\Extract  Booking Data to staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="223.2,41.6"
+          Id="Package\Extract  Booking Data to staging.EventHandlers[OnPreExecute]\Truncate Booking Staging table"
+          TopLeft="416.999993786216,83.9999987483025" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
   <PipelineComponentMetadata
     design-time-name="Package\Extract  Booking Data to staging\Load data to Booking staging table">
     <Properties>
@@ -7541,23 +7089,406 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract  Booking Data to staging\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Extract Customer Address Data to staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="283.2,41.6"
+          Id="Package\Extract Customer Address Data to staging\Load data to customer address staging table"
+          TopLeft="348.999994799495,224.999996647239" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Extract Customer Address Data to staging\Flat File Source"
+          TopLeft="248.999996289611,72.9999989122152" />
+        <EdgeLayout
+          Id="Package\Extract Customer Address Data to staging.Paths[Flat File Source Output]"
+          TopLeft="324.599996289611,114.599998912215">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="165.999998509884,110.399997735023"
+              Start="0,0"
+              End="165.999998509884,102.899997735023">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.1999988675117" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,51.1999988675117"
+                    Point2="0,55.1999988675117"
+                    Point3="4,55.1999988675117" />
+                  <mssgle:LineSegment
+                    End="161.999998509884,55.1999988675117" />
+                  <mssgle:CubicBezierSegment
+                    Point1="161.999998509884,55.1999988675117"
+                    Point2="165.999998509884,55.1999988675117"
+                    Point3="165.999998509884,59.1999988675117" />
+                  <mssgle:LineSegment
+                    End="165.999998509884,102.899997735023" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <DtsEventHandler
-    design-time-name="Package\Extract  Booking Data to staging.EventHandlers[OnPreExecute]">
+    design-time-name="Package\Extract Customer Address Data to staging.EventHandlers[OnPreExecute]">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="223.2,41.6"
-          Id="Package\Extract  Booking Data to staging.EventHandlers[OnPreExecute]\Truncate Booking Staging table"
-          TopLeft="416.999993786216,83.9999987483025" />
+          Size="269.6,41.6"
+          Id="Package\Extract Customer Address Data to staging.EventHandlers[OnPreExecute]\Truncate customer Address Staging table"
+          TopLeft="482.999992802739,179.999997317791" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Customer Address Data to staging\Load data to customer address staging table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Extract Customer Data to staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Extract Customer Data to staging\OLE DB Source"
+          TopLeft="209.999988526106,81.4666661001576" />
+        <NodeLayout
+          Size="171.2,41.6"
+          Id="Package\Extract Customer Data to staging\OLE DB Destination"
+          TopLeft="324.999982242784,227.066665087673" />
+        <EdgeLayout
+          Id="Package\Extract Customer Data to staging.Paths[OLE DB Source Output]"
+          TopLeft="285.999988526106,123.066666100158">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="124.599993716677,103.999998987516"
+              Start="0,0"
+              End="124.599993716677,96.4999989875158">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.9999994937579" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.9999994937579"
+                    Point2="0,51.9999994937579"
+                    Point3="4,51.9999994937579" />
+                  <mssgle:LineSegment
+                    End="120.599993716677,51.9999994937579" />
+                  <mssgle:CubicBezierSegment
+                    Point1="120.599993716677,51.9999994937579"
+                    Point2="124.599993716677,51.9999994937579"
+                    Point3="124.599993716677,55.9999994937579" />
+                  <mssgle:LineSegment
+                    End="124.599993716677,96.4999989875158" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Extract Customer Data to staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="234.4,41.6"
+          Id="Package\Extract Customer Data to staging.EventHandlers[OnPreExecute]\Truncate Customer Staging Table"
+          TopLeft="394.999994114041,157.999997645617" />
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
   <TaskHost
+    design-time-name="Package\Extract Customer Type Data to staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Extract Customer Type Data to staging\OLE DB Source"
+          TopLeft="305.999995440245,106.999998405576" />
+        <NodeLayout
+          Size="265.6,41.6"
+          Id="Package\Extract Customer Type Data to staging\Load data to customer type staging table"
+          TopLeft="263.999996066094,243.999996364117" />
+        <EdgeLayout
+          Id="Package\Extract Customer Type Data to staging.Paths[OLE DB Source Output]"
+          TopLeft="381.999995440245,148.599998405576">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="14.8000006258489,95.399997958541"
+              Start="0,0"
+              End="14.8000006258489,87.899997958541">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.6999989792705" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.6999989792705"
+                    Point2="0,47.6999989792705"
+                    Point3="4,47.6999989792705" />
+                  <mssgle:LineSegment
+                    End="10.8000006258489,47.6999989792705" />
+                  <mssgle:CubicBezierSegment
+                    Point1="10.8000006258489,47.6999989792705"
+                    Point2="14.8000006258489,47.6999989792705"
+                    Point3="14.8000006258489,51.6999989792705" />
+                  <mssgle:LineSegment
+                    End="14.8000006258489,87.899997958541" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Extract Customer Type Data to staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="257.6,41.6"
+          Id="Package\Extract Customer Type Data to staging.EventHandlers[OnPreExecute]\Truncate CustomerType Staging Table"
+          TopLeft="347.999994814396,112.999998316169" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Customer Type Data to staging\Load data to customer type staging table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Customer Type Data to staging\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Extract Deposit type Data to staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="256.8,41.6"
+          Id="Package\Extract Deposit type Data to staging\Load data to deposit type staging table"
+          TopLeft="458.999993160367,214.99999679625" />
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\Extract Deposit type Data to staging\Excel Source"
+          TopLeft="341.999994903803,97.9999985396862" />
+        <EdgeLayout
+          Id="Package\Extract Deposit type Data to staging.Paths[Excel Source Output]"
+          TopLeft="411.999994903803,139.599998539686">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="175.399998256564,75.3999982565641"
+              Start="0,0"
+              End="175.399998256564,67.8999982565641">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.6999991282821" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.6999991282821"
+                    Point2="0,37.6999991282821"
+                    Point3="4,37.6999991282821" />
+                  <mssgle:LineSegment
+                    End="171.399998256564,37.6999991282821" />
+                  <mssgle:CubicBezierSegment
+                    Point1="171.399998256564,37.6999991282821"
+                    Point2="175.399998256564,37.6999991282821"
+                    Point3="175.399998256564,41.6999991282821" />
+                  <mssgle:LineSegment
+                    End="175.399998256564,67.8999982565641" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Extract Deposit type Data to staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="247.2,41.6"
+          Id="Package\Extract Deposit type Data to staging.EventHandlers[OnPreExecute]\Truncate Deposit Type Staging table"
+          TopLeft="266.99999602139,134.999997988343" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Deposit type Data to staging\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Deposit type Data to staging\Load data to deposit type staging table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Extract Hotel Data to staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\Extract Hotel Data to staging\OLE DB Destination 1"
+          TopLeft="454.999993219972,246.999996319413" />
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\Extract Hotel Data to staging\Flat File Source"
+          TopLeft="463.999993085861,93.9999985992908" />
+        <EdgeLayout
+          Id="Package\Extract Hotel Data to staging.Paths[Flat File Source Output]"
+          TopLeft="542.299993152916,135.599998599291">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,111.399997720122"
+              Start="0,0"
+              End="0,103.899997720122">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,103.899997720122" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Extract Hotel Data to staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="210.4,41.6"
+          Id="Package\Extract Hotel Data to staging.EventHandlers[OnPreExecute]\Truncate Hotel Staging table"
+          TopLeft="411.999993860722,176.999997362494" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Hotel Data to staging\OLE DB Destination 1">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
     design-time-name="Package\Extract HotelAddress Data to staging">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="151.2,41.6"
           Id="Package\Extract HotelAddress Data to staging\Flat File Source"
@@ -7597,12 +7528,26 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Extract HotelAddress Data to staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="251.2,41.6"
+          Id="Package\Extract HotelAddress Data to staging.EventHandlers[OnPreExecute]\Truncate Hotel Address Staging table"
+          TopLeft="399.999994039536,160.999997600913" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
   <PipelineComponentMetadata
     design-time-name="Package\Extract HotelAddress Data to staging\Load data to Hotel Address staging table">
     <Properties>
@@ -7616,274 +7561,11 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package\Extract HotelAddress Data to staging.EventHandlers[OnPreExecute]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="251.2,41.6"
-          Id="Package\Extract HotelAddress Data to staging.EventHandlers[OnPreExecute]\Truncate Hotel Address Staging table"
-          TopLeft="399.999994039536,160.999997600913" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
-  <TaskHost
-    design-time-name="Package\Extract Customer Address Data to staging">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="151.2,41.6"
-          Id="Package\Extract Customer Address Data to staging\Flat File Source"
-          TopLeft="248.999996289611,72.9999989122152" />
-        <NodeLayout
-          Size="283.2,41.6"
-          Id="Package\Extract Customer Address Data to staging\Load data to customer address staging table"
-          TopLeft="348.999994799495,224.999996647239" />
-        <EdgeLayout
-          Id="Package\Extract Customer Address Data to staging.Paths[Flat File Source Output]"
-          TopLeft="324.599996289611,114.599998912215">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="165.999998509884,110.399997735023"
-              Start="0,0"
-              End="165.999998509884,102.899997735023">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.1999988675117" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,51.1999988675117"
-                    Point2="0,55.1999988675117"
-                    Point3="4,55.1999988675117" />
-                  <mssgle:LineSegment
-                    End="161.999998509884,55.1999988675117" />
-                  <mssgle:CubicBezierSegment
-                    Point1="161.999998509884,55.1999988675117"
-                    Point2="165.999998509884,55.1999988675117"
-                    Point3="165.999998509884,59.1999988675117" />
-                  <mssgle:LineSegment
-                    End="165.999998509884,102.899997735023" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Customer Address Data to staging\Load data to customer address staging table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package\Extract Customer Address Data to staging.EventHandlers[OnPreExecute]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="269.6,41.6"
-          Id="Package\Extract Customer Address Data to staging.EventHandlers[OnPreExecute]\Truncate customer Address Staging table"
-          TopLeft="482.999992802739,179.999997317791" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
-  <TaskHost
-    design-time-name="Package\Extract Deposit type Data to staging">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="140,41.6"
-          Id="Package\Extract Deposit type Data to staging\Excel Source"
-          TopLeft="341.999994903803,97.9999985396862" />
-        <NodeLayout
-          Size="256.8,41.6"
-          Id="Package\Extract Deposit type Data to staging\Load data to deposit type staging table"
-          TopLeft="458.999993160367,214.99999679625" />
-        <EdgeLayout
-          Id="Package\Extract Deposit type Data to staging.Paths[Excel Source Output]"
-          TopLeft="411.999994903803,139.599998539686">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="175.399998256564,75.3999982565641"
-              Start="0,0"
-              End="175.399998256564,67.8999982565641">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,33.6999991282821" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,33.6999991282821"
-                    Point2="0,37.6999991282821"
-                    Point3="4,37.6999991282821" />
-                  <mssgle:LineSegment
-                    End="171.399998256564,37.6999991282821" />
-                  <mssgle:CubicBezierSegment
-                    Point1="171.399998256564,37.6999991282821"
-                    Point2="175.399998256564,37.6999991282821"
-                    Point3="175.399998256564,41.6999991282821" />
-                  <mssgle:LineSegment
-                    End="175.399998256564,67.8999982565641" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Deposit type Data to staging\Excel Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Deposit type Data to staging\Load data to deposit type staging table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package\Extract Deposit type Data to staging.EventHandlers[OnPreExecute]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="247.2,41.6"
-          Id="Package\Extract Deposit type Data to staging.EventHandlers[OnPreExecute]\Truncate Deposit Type Staging table"
-          TopLeft="266.99999602139,134.999997988343" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
-  <TaskHost
-    design-time-name="Package\Extract Reservation Status Data to staging">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="140,41.6"
-          Id="Package\Extract Reservation Status Data to staging\Excel Source"
-          TopLeft="291.999995648861,101.999998480082" />
-        <NodeLayout
-          Size="282.4,41.6"
-          Id="Package\Extract Reservation Status Data to staging\Load data to reservation status staging table"
-          TopLeft="384.999994263053,238.999996438623" />
-        <EdgeLayout
-          Id="Package\Extract Reservation Status Data to staging.Paths[Excel Source Output]"
-          TopLeft="361.999995648861,143.599998480082">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="164.199998614192,95.399997958541"
-              Start="0,0"
-              End="164.199998614192,87.899997958541">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,43.6999989792705" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,43.6999989792705"
-                    Point2="0,47.6999989792705"
-                    Point3="4,47.6999989792705" />
-                  <mssgle:LineSegment
-                    End="160.199998614192,47.6999989792705" />
-                  <mssgle:CubicBezierSegment
-                    Point1="160.199998614192,47.6999989792705"
-                    Point2="164.199998614192,47.6999989792705"
-                    Point3="164.199998614192,51.6999989792705" />
-                  <mssgle:LineSegment
-                    End="164.199998614192,87.899997958541" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Reservation Status Data to staging\Excel Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract Reservation Status Data to staging\Load data to reservation status staging table">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package\Extract Reservation Status Data to staging.EventHandlers[OnPreExecute]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="266.4,41.6"
-          Id="Package\Extract Reservation Status Data to staging.EventHandlers[OnPreExecute]\Truncate reservationStatus Staging table"
-          TopLeft="417.999993771315,123.999998152256" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
   <TaskHost
     design-time-name="Package\Extract mealType Data to staging">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="152,41.6"
           Id="Package\Extract mealType Data to staging\OLE DB Source"
@@ -7923,25 +7605,26 @@
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\Extract mealType Data to staging\OLE DB Source">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
+  <DtsEventHandler
+    design-time-name="Package\Extract mealType Data to staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="228,41.6"
+          Id="Package\Extract mealType Data to staging.EventHandlers[OnPreExecute]\Truncate neal type Staging table"
+          TopLeft="430.9999935776,122.999998167157" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
   <PipelineComponentMetadata
     design-time-name="Package\Extract mealType Data to staging\Load data to meal type staging table">
     <Properties>
@@ -7955,58 +7638,8 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
-  <DtsEventHandler
-    design-time-name="Package\Extract mealType Data to staging.EventHandlers[OnPreExecute]">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
-        <NodeLayout
-          Size="228,41.6"
-          Id="Package\Extract mealType Data to staging.EventHandlers[OnPreExecute]\Truncate neal type Staging table"
-          TopLeft="430.9999935776,122.999998167157" />
-      </GraphLayout>
-    </LayoutInfo>
-  </DtsEventHandler>
-  <TaskHost
-    design-time-name="Package\Extract Hotel Data to staging">
-    <LayoutInfo>
-      <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
-        <NodeLayout
-          Size="151.2,41.6"
-          Id="Package\Extract Hotel Data to staging\Flat File Source"
-          TopLeft="463.999993085861,93.9999985992908" />
-        <NodeLayout
-          Size="180,41.6"
-          Id="Package\Extract Hotel Data to staging\OLE DB Destination 1"
-          TopLeft="454.999993219972,246.999996319413" />
-        <EdgeLayout
-          Id="Package\Extract Hotel Data to staging.Paths[Flat File Source Output]"
-          TopLeft="542.299993152916,135.599998599291">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,111.399997720122"
-              Start="0,0"
-              End="0,103.899997720122">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,103.899997720122" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-      </GraphLayout>
-    </LayoutInfo>
-  </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Extract Hotel Data to staging\OLE DB Destination 1">
+    design-time-name="Package\Extract mealType Data to staging\OLE DB Source">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -8018,18 +7651,353 @@
       </Property>
     </Properties>
   </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Extract Reservation Status Data to staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="282.4,41.6"
+          Id="Package\Extract Reservation Status Data to staging\Load data to reservation status staging table"
+          TopLeft="384.999994263053,238.999996438623" />
+        <NodeLayout
+          Size="140,41.6"
+          Id="Package\Extract Reservation Status Data to staging\Excel Source"
+          TopLeft="291.999995648861,101.999998480082" />
+        <EdgeLayout
+          Id="Package\Extract Reservation Status Data to staging.Paths[Excel Source Output]"
+          TopLeft="361.999995648861,143.599998480082">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="164.199998614192,95.399997958541"
+              Start="0,0"
+              End="164.199998614192,87.899997958541">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.6999989792705" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.6999989792705"
+                    Point2="0,47.6999989792705"
+                    Point3="4,47.6999989792705" />
+                  <mssgle:LineSegment
+                    End="160.199998614192,47.6999989792705" />
+                  <mssgle:CubicBezierSegment
+                    Point1="160.199998614192,47.6999989792705"
+                    Point2="164.199998614192,47.6999989792705"
+                    Point3="164.199998614192,51.6999989792705" />
+                  <mssgle:LineSegment
+                    End="164.199998614192,87.899997958541" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
   <DtsEventHandler
-    design-time-name="Package\Extract Hotel Data to staging.EventHandlers[OnPreExecute]">
+    design-time-name="Package\Extract Reservation Status Data to staging.EventHandlers[OnPreExecute]">
     <LayoutInfo>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
         <NodeLayout
-          Size="210.4,41.6"
-          Id="Package\Extract Hotel Data to staging.EventHandlers[OnPreExecute]\Truncate Hotel Staging table"
-          TopLeft="411.999993860722,176.999997362494" />
+          Size="266.4,41.6"
+          Id="Package\Extract Reservation Status Data to staging.EventHandlers[OnPreExecute]\Truncate reservationStatus Staging table"
+          TopLeft="417.999993771315,123.999998152256" />
       </GraphLayout>
     </LayoutInfo>
   </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Reservation Status Data to staging\Excel Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Reservation Status Data to staging\Load data to reservation status staging table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Extract Room Category Data to staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Extract Room Category Data to staging\OLE DB Source"
+          TopLeft="390.999994173646,95.9999985694886" />
+        <NodeLayout
+          Size="272.8,41.6"
+          Id="Package\Extract Room Category Data to staging\Load data to Room Category staging table"
+          TopLeft="416.999993786216,234.999996498227" />
+        <EdgeLayout
+          Id="Package\Extract Room Category Data to staging.Paths[OLE DB Source Output]"
+          TopLeft="466.999994173646,137.599998569489">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="86.3999996125699,97.3999979287386"
+              Start="0,0"
+              End="86.3999996125699,89.8999979287386">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,44.6999989643693" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,44.6999989643693"
+                    Point2="0,48.6999989643693"
+                    Point3="4,48.6999989643693" />
+                  <mssgle:LineSegment
+                    End="82.3999996125699,48.6999989643693" />
+                  <mssgle:CubicBezierSegment
+                    Point1="82.3999996125699,48.6999989643693"
+                    Point2="86.3999996125699,48.6999989643693"
+                    Point3="86.3999996125699,52.6999989643693" />
+                  <mssgle:LineSegment
+                    End="86.3999996125699,89.8999979287386" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Extract Room Category Data to staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="258.4,41.6"
+          Id="Package\Extract Room Category Data to staging.EventHandlers[OnPreExecute]\Truncate Room Category Staging table"
+          TopLeft="433.999993532896,178.999997332692" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Room Category Data to staging\Load data to Room Category staging table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Room Category Data to staging\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Extract Room Tier Data to staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Extract Room Tier Data to staging\OLE DB Source"
+          TopLeft="337.999994963408,70.9999989420175" />
+        <NodeLayout
+          Size="246.4,41.6"
+          Id="Package\Extract Room Tier Data to staging\Load data to RoomTier staging table"
+          TopLeft="492.999992653728,213.999996811152" />
+        <EdgeLayout
+          Id="Package\Extract Room Tier Data to staging.Paths[OLE DB Source Output]"
+          TopLeft="413.999994963408,112.599998942018">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="202.19999769032,101.399997869134"
+              Start="0,0"
+              End="202.19999769032,93.899997869134">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,46.699998934567" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,46.699998934567"
+                    Point2="0,50.699998934567"
+                    Point3="4,50.699998934567" />
+                  <mssgle:LineSegment
+                    End="198.19999769032,50.699998934567" />
+                  <mssgle:CubicBezierSegment
+                    Point1="198.19999769032,50.699998934567"
+                    Point2="202.19999769032,50.699998934567"
+                    Point3="202.19999769032,54.699998934567" />
+                  <mssgle:LineSegment
+                    End="202.19999769032,93.899997869134" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Extract Room Tier Data to staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="231.2,41.6"
+          Id="Package\Extract Room Tier Data to staging.EventHandlers[OnPreExecute]\Truncate RoomTier Staging table"
+          TopLeft="322.999995186925,120.99999819696" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Room Tier Data to staging\Load data to RoomTier staging table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Room Tier Data to staging\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\Extract Room Type Data to staging">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="152,41.6"
+          Id="Package\Extract Room Type Data to staging\OLE DB Source"
+          TopLeft="283.99999576807,88.9999986737966" />
+        <NodeLayout
+          Size="246.4,41.6"
+          Id="Package\Extract Room Type Data to staging\Load data to room type staging table"
+          TopLeft="402.999993994832,225.999996632338" />
+        <EdgeLayout
+          Id="Package\Extract Room Type Data to staging.Paths[OLE DB Source Output]"
+          TopLeft="359.99999576807,130.599998673797">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="166.199998226762,95.399997958541"
+              Start="0,0"
+              End="166.199998226762,87.899997958541">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,43.6999989792705" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,43.6999989792705"
+                    Point2="0,47.6999989792705"
+                    Point3="4,47.6999989792705" />
+                  <mssgle:LineSegment
+                    End="162.199998226762,47.6999989792705" />
+                  <mssgle:CubicBezierSegment
+                    Point1="162.199998226762,47.6999989792705"
+                    Point2="166.199998226762,47.6999989792705"
+                    Point3="166.199998226762,51.6999989792705" />
+                  <mssgle:LineSegment
+                    End="166.199998226762,87.899997958541" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <DtsEventHandler
+    design-time-name="Package\Extract Room Type Data to staging.EventHandlers[OnPreExecute]">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="236.8,41.6"
+          Id="Package\Extract Room Type Data to staging.EventHandlers[OnPreExecute]\Truncate RoomType Staging table"
+          TopLeft="353.999994724989,151.999997735024" />
+      </GraphLayout>
+    </LayoutInfo>
+  </DtsEventHandler>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Room Type Data to staging\Load data to room type staging table">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Extract Room Type Data to staging\OLE DB Source">
     <Properties>
@@ -8044,7 +8012,20 @@
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Extract Room Type Data to staging\Load data to room type staging table">
+    design-time-name="Package\Extract Customer Data to staging\OLE DB Source">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Extract Customer Data to staging\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
